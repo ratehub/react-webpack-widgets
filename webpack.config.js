@@ -29,15 +29,9 @@ module.exports = {
 			loaders: ['babel-loader'],
 			include: path.join(__dirname, 'src')
 		}, {
-			// global CSS
-			test: /\.scss$/,
-			loader: 'style-loader!css-loader?importLoaders=1!sass-loader',
-			include: path.join(__dirname, 'src/scss'),
-		}, {
 			// CSS modules
-			test: /\.css$/,
-			loader: 'style-loader!css-loader?modules&importLoaders=2&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader',
-			include: path.join(__dirname, 'src'),
+			test: /\.s?css$/,
+			loader: 'style-loader!css-loader?modules&importLoaders=2&localIdentName=[name]__[local]___[hash:base64:5]!sass-loader',			include: path.join(__dirname, 'src'),
 		}, {
 			// JSON
 			test: /\.json$/,

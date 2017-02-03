@@ -5,7 +5,6 @@ import { AppContainer } from 'react-hot-loader';
 import Redbox from 'redbox-react';
 
 import WidgetContainer from './components/WidgetContainer';
-import './scss/widget-reset.scss';
 
 let widget = (widgetName, Container) => {
   return (
